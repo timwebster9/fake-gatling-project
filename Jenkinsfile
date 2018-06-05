@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Docker') {
             steps {
-                withDocker('hmcts/moj-gatling-image', '-v $WORKSPACE/src/gatling/conf:/etc/gatling/conf') {
+                withDocker('hmcts/moj-gatling-image', null) {
                     sh 'ls -l /etc/gatling/conf'
                 }
             }
